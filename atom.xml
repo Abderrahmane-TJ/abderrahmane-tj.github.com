@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[ATJ is on GitHub]]></title>
+  <link href="abderrahmane-tj.github.com/atom.xml" rel="self"/>
+  <link href="abderrahmane-tj.github.com/"/>
+  <updated>2011-10-18T02:47:26+00:00</updated>
+  <id>abderrahmane-tj.github.com/</id>
+  <author>
+    <name><![CDATA[Abderrahmane TAHRI JOUTI]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[First Blog]]></title>
+    <link href="abderrahmane-tj.github.com/blog/2011/10/18/first-blog/"/>
+    <updated>2011-10-18T02:12:00+00:00</updated>
+    <id>abderrahmane-tj.github.com/blog/2011/10/18/first-blog</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+</feed>
