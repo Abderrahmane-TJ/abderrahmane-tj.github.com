@@ -392,13 +392,13 @@ hr {
 
 }
 
-section#content h3{
+#content h3{
   font-size: 20px;
 
   line-height: 26px;
   margin-top: 10px;
 }
-section#content p{
+#content p{
   line-height: 23px;
   text-align: justify;
   margin-top: 15px;
