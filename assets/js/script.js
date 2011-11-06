@@ -31,7 +31,6 @@ $(document).ready(function(){
 
 	    $this.html($("<span class='index-article-title'>").html(lorem[i%nc]));
 
-
 	}).bind("click", function(evt){
 		$this = $(this);
 		lastTopOffset = $this.offset().top;
@@ -39,7 +38,7 @@ $(document).ready(function(){
         var bg = colors[dcolor].main;
 		var color = colors[dcolor].side;
 		$('body, body a').css({"background-color": bg})
-		$('#menu, #menu a').css({"background-color": bg, "text-shadow": "#"+color, "color": "white"})
+		$('#menu, #menu a').css({"background-color": bg, "text-shadow": color, "color": "white"})
 		$("#content")
 			.addClass("reading")
 			.css({
