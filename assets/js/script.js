@@ -29,7 +29,7 @@ $(document).ready(function(){
 
 		$this = $(this);
 
-	    $this.html($("<span class='index-article-title'>").html(lorem[i%nc]));
+	    $this.html($("<span class='index-article-title'>").html("zz"));
 
 	}).bind("click", function(evt){
 		$this = $(this);
