@@ -56,10 +56,10 @@ $(document).ready(function(){
 			.end()
 			.find("#list-article")
 			.hide();
-			$("#close-article")
+			$("#head-article")
 			.css({
 				"background": color,
-				"box-shadow": "0px 0px 4px "+color
+				/*"box-shadow": "0px 0px 4px "+color*/
 
 			}).show();
 
@@ -83,7 +83,7 @@ $(document).ready(function(){
 		$("#list-article").show();
 		$('html,body').animate({scrollTop: lastTopOffset-35}, '700');
 		lastTopOffset = 0;
-		$(this).hide();
+		$("#head-article").hide();
 	});
 
 });
