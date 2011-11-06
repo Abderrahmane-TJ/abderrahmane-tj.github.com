@@ -20,7 +20,7 @@ $(document).ready(function(){
 		"greyone": { main: "#474747", side: "#212121" },
 		"greytwo": { main: "#333", side: "#0D0D0D" }
 	},
-	nc = 14 /* Object.size(colors) */,
+	nc = 10 /* Object.size(colors) */,
 	lorem = ["Nam quis nulla.","Lorem ipsum dolor sit amet","Lorem ipsum dolor sit amet", "Etiam posuere quam ac quam.","In sem justo, commodo ut.","Morbi a metus. biglou sidi.","Praesent in mauris eu.", "Morbi leo mi, malou fati.","Maecenas ipsum velit","Aenean placerat. tirabichu."],
 	cache = []
 	lastTopOffset = 0;
@@ -36,8 +36,8 @@ $(document).ready(function(){
 		$this = $(this);
 		lastTopOffset = $this.offset().top;
 		var dcolor = $this.data("color");
-        var bg = "#"+colors[dcolor].main;
-		var color = "#"+colors[dcolor].side;
+        var bg = colors[dcolor].main;
+		var color = colors[dcolor].side;
 		$('body, body a').css({"background-color": bg})
 		$('#menu, #menu a').css({"background-color": bg, "text-shadow": "#"+color, "color": "white"})
 		$("#content")
