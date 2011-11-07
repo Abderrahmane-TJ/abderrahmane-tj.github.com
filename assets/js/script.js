@@ -58,7 +58,7 @@ $(document).ready(function(){
 			.hide();
 			$("#head-article")
 			.css({
-				"background": color,
+				/*"background": color,*/
 				/*"box-shadow": "0px 0px 4px "+color*/
 
 			}).show();
