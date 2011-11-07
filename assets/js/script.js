@@ -95,6 +95,10 @@ $(document).ready(function(){
         //$(this).removeClass("closeing-button-shown");
 	});
     
+    $("#fixed_top_article").click(function() {
+          $('html,body').animate({scrollTop: $("body").offset().top}, '700');      
+    });
+    
     $(window).scroll(function(e) {
         currentTopOffset = $(window).scrollTop();
     })
