@@ -74,12 +74,11 @@ $(document).ready(function(){
 		$("#content")
 			.removeClass("reading")
 			.css({
-				"box-shadow": "none",
 				"border-width": "0px",
 				"border-style": "none",
 				"border-color": "none"
 			});
-
+        $("#content_wrapper").css({"box-shadow": "none"});
 
 		$("#open-article").hide();
 		$("#list-article").show();
