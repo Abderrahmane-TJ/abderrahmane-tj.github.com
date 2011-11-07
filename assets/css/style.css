@@ -283,8 +283,11 @@ hr {
 }
 
 #content_wrapper.reading{
-  padding: 10px;
   box-shadow: #333 0px 0px 10px;
+}
+
+.reading #content{
+    padding: 10px;
 }
 
 #head-article{
