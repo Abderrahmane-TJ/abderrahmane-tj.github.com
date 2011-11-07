@@ -290,8 +290,8 @@ hr {
 #head-article{
     height: 30px;
     background-color: #0D0D0D;
-    background-image:-webkit-gradient(linear,left top,left bottom,from(#ODODOD),to(#333333))!important;
-    background-image:-moz-linear-gradient(top,#ODODOD,#333333)!important;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#ODODOD),to(#333333));
+    background-image: -moz-linear-gradient(top,#ODODOD,#333333);
     color: white;
     display: none;
     top:0;
