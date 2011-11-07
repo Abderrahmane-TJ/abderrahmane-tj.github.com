@@ -102,7 +102,7 @@ $(document).ready(function(){
         if(currentTopOffset > 175 && !$("#fixed_close_article").hasClass("fixed_close_article_shown")){
             $("#fixed_close_article").addClass("fixed_close_article_shown");
         }else{
-            if($("#fixed_close_article").hasClass("fixed_close_article_shown")){
+            if(currentTopOffset <= 175 && $("#fixed_close_article").hasClass("fixed_close_article_shown")){
                 $("#fixed_close_article").removeClass("fixed_close_article_shown");
             }
         }
