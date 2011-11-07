@@ -282,9 +282,9 @@ hr {
   
 }
 
-#content.reading{
+#content_wrapper.reading{
   padding: 10px;
-  box-shadow: #333 0px 0px 20px;
+  box-shadow: #333 0px 0px 10px;
 }
 
 #head-article{
@@ -388,13 +388,13 @@ hr {
 }
 
 
-#content.reading h1{
+.reading h1{
   line-height: 70px;
   margin-top: 0px;
   font-size: 40px;
 }
 
-#content.reading article p{
+.reading article p{
 
   font-size: 13px;
   line-height: 20px;

@@ -39,9 +39,9 @@ $(document).ready(function(){
 		var color = colors[dcolor].side;
 
 		$('body, body a').css({"background-color": bg});
-		$('#menu, #menu a').css({"background-color": bg, "text-shadow": color+" 0px 2px 2px", "color": "white"})
+		$('#menu, #menu a').css({"background-color": bg, "text-shadow": color+" 0px 2px 2px", "color": "white"});
+        
 		$("#content")
-			.addClass("reading")
 			.css({
 /*				"box-shadow": color+" 10px 0px 10px",
 				"border-left": " 10px solid "+color
@@ -51,19 +51,23 @@ $(document).ready(function(){
 				"border-color": color,
                 "border-top": "0px"
 			})
-			.find("#open-article")
+		.find("#open-article")
 			.html(lorem_content)
 			.show()
-			.end()
-			.find("#list-article")
-			.hide();
-            $("#content_wrapper").css({"box-shadow": color+" 0px 0px 10px"});
+		.end()
+		.find("#list-article")
+		    .hide();
+            
+            $("#content_wrapper")
+    		    .addClass("reading")
+                .css({"box-shadow": color+" 0px 0px 10px"});
+                
 			$("#head-article")
-			.css({
-				/*"background": color,*/
-				/*"box-shadow": "0px 0px 4px "+color*/
-
-			}).show();
+    			.css({
+    				/*"background": color,*/
+    				/*"box-shadow": "0px 0px 4px "+color*/
+    
+    			}).show();
 
 		$('html,body').animate({scrollTop: $("body").offset().top}, '700');
 	});
@@ -72,13 +76,14 @@ $(document).ready(function(){
 		$('body, body a').css({"background-color": "white"})
 		$('#menu, #menu a').css({"background-color": "white", "text-shadow": "none", "color": "black"})
 		$("#content")
-			.removeClass("reading")
 			.css({
 				"border-width": "0px",
 				"border-style": "none",
 				"border-color": "none"
 			});
-        $("#content_wrapper").css({"box-shadow": "none"});
+        $("#content_wrapper")
+            .removeClass("reading")
+            .css({"box-shadow": "none"});
 
 		$("#open-article").hide();
 		$("#list-article").show();
