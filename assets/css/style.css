@@ -264,18 +264,50 @@ hr {
   text-decoration: none;
 }
 
-#content{
-  /*padding-top: 112px;*/
+/*
+    the content section
+*/
+
+
+#content_wrapper{
   margin-left: 300px;
   background: white;
   width: 680px;
   margin-top: 20px;
   margin-bottom: 20px;
+  position: relative;
+}
+#content{
+  /*padding-top: 112px;*/
+  
 }
 
 #content.reading{
   padding: 10px;
   box-shadow: #333 0px 0px 20px;
+}
+
+#head-article{
+    height: 30px;
+    background: #0D0D0D;
+    color: white;
+    display: none;
+    top:0;
+}
+#close-article{
+  width: 20px;
+  height: 20px;
+  background: #0D0D0D;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: white;
+  font-size: 20px;
+  padding-left: 8px;
+  padding-top: 5px;
+  box-shadow: 0px 0px 4px #0d0d0d;
+  cursor: pointer;
+
 }
 
 .card{
@@ -350,29 +382,7 @@ hr {
   bottom: 10px;
   left: 10px;
 }
-#head-article{
-    height: 30px;
-    background: #0D0D0D;
-    color: white;
-    display: none;
-    position: fixed;
-    top:20px;
-}
-#close-article{
-  width: 20px;
-  height: 20px;
-  background: #0D0D0D;
-  position: absolute;
-  left: 5px;
-  top: 5px;
-  color: white;
-  font-size: 20px;
-  padding-left: 8px;
-  padding-top: 5px;
-  box-shadow: 0px 0px 4px #0d0d0d;
-  cursor: pointer;
-  display: none;
-}
+
 
 #content.reading h1{
   line-height: 70px;
