@@ -300,12 +300,13 @@ hr {
   background: #0D0D0D;
   position: absolute;
   right: 5px;
-  top: 5px;
+  top: 6px;
   color: white;
   font-size: 20px;
   padding-left: 8px;
   padding-top: 5px;
-  box-shadow: 0px 0px 4px #0d0d0d;
+  /*box-shadow: 0px 0px 4px #0d0d0d;*/
+  text-shadow: 0px 0px 4px #0d0d0d;
   cursor: pointer;
 
 }
