@@ -23,7 +23,8 @@ $(document).ready(function(){
 	nc = 10 /* Object.size(colors) */,
 	lorem = ["Nam quis nulla.","Lorem ipsum dolor sit amet","Lorem ipsum dolor sit amet", "Etiam posuere quam ac quam.","In sem justo, commodo ut.","Morbi a metus. biglou sidi.","Praesent in mauris eu.", "Morbi leo mi, malou fati.","Maecenas ipsum velit","Aenean placerat. tirabichu."],
 	cache = []
-	lastTopOffset = 0;
+	lastTopOffset = 0,
+    currentTopOffset = 0;
 
 	$(".card").each(function(i,elm){
 
@@ -68,7 +69,7 @@ $(document).ready(function(){
     				/*"box-shadow": "0px 0px 4px "+color*/
     
     			}).show();
-
+        //$("#close-article").addClass("closeing-button-shown");
 		$('html,body').animate({scrollTop: $("body").offset().top}, '700');
 	});
 
@@ -90,7 +91,22 @@ $(document).ready(function(){
 		$('html,body').animate({scrollTop: lastTopOffset-35}, '700');
 		lastTopOffset = 0;
 		$("#head-article").hide();
+        //$(this).removeClass("closeing-button-shown");
 	});
+    
+    $(window).scroll(function(e) {
+        currentTopOffset = $(window).scrollTop();
+    })
+    
+    checkChanges = setInterval(function() {
+        if(currentTopOffset > 175 && !$("#fixed_close_article").hasClass("fixed_close_article_shown")){
+            $("#fixed_close_article").addClass("fixed_close_article_shown");
+        }else{
+            if($("#fixed_close_article").hasClass("fixed_close_article_shown")){
+                $("#fixed_close_article").removeClass("fixed_close_article_shown");
+            }
+        }
+    }, 250)
 
 });
 
