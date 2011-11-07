@@ -38,17 +38,18 @@ $(document).ready(function(){
         var bg = colors[dcolor].main;
 		var color = colors[dcolor].side;
 
-		$('body, body a').css({"background-color": bg})
+		$('body, body a').css({"background-color": bg});
 		$('#menu, #menu a').css({"background-color": bg, "text-shadow": color+" 0px 2px 2px", "color": "white"})
 		$("#content")
 			.addClass("reading")
 			.css({
 /*				"box-shadow": color+" 10px 0px 10px",
 				"border-left": " 10px solid "+color
-*/				"box-shadow": color+" 0px 0px 10px",
+*/				
 				"border-width": "1px",
 				"border-style": "solid",
-				"border-color": color
+				"border-color": color,
+                "border-top": "0px"
 			})
 			.find("#open-article")
 			.html(lorem_content)
@@ -56,6 +57,7 @@ $(document).ready(function(){
 			.end()
 			.find("#list-article")
 			.hide();
+            $("#content_wrapper").css({"box-shadow": color+" 0px 0px 10px"});
 			$("#head-article")
 			.css({
 				/*"background": color,*/
