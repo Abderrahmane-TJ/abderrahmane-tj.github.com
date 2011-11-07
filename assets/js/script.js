@@ -73,7 +73,7 @@ $(document).ready(function(){
 		$('html,body').animate({scrollTop: $("body").offset().top}, '700');
 	});
 
-	$("#close-article").live("click",function(){
+	$("#close-article, #fixed_close_article").live("click",function(){
 		$('body, body a').css({"background-color": "white"})
 		$('#menu, #menu a').css({"background-color": "white", "text-shadow": "none", "color": "black"})
 		$("#content")
@@ -91,6 +91,7 @@ $(document).ready(function(){
 		$('html,body').animate({scrollTop: lastTopOffset-35}, '700');
 		lastTopOffset = 0;
 		$("#head-article").hide();
+        $("#fixed_close_article, #fixed_top_article").removeClass("fixed_close_article_shown").hide();
         //$(this).removeClass("closeing-button-shown");
 	});
     
@@ -99,15 +100,17 @@ $(document).ready(function(){
     })
     
     checkChanges = setInterval(function() {
-        if(currentTopOffset > 175 && !$("#fixed_close_article").hasClass("fixed_close_article_shown")){
-            $("#fixed_close_article, #fixed_top_article")
-                .addClass("fixed_close_article_shown")
-                .show();
-        }else{
-            if(currentTopOffset <= 175 && $("#fixed_close_article").hasClass("fixed_close_article_shown")){
+        if($("#content_wrapper").hasClass("reading")){
+            if(currentTopOffset > 175 && !$("#fixed_close_article").hasClass("fixed_close_article_shown")){
                 $("#fixed_close_article, #fixed_top_article")
-                    .removeClass("fixed_close_article_shown")
-                    .hide();
+                    .addClass("fixed_close_article_shown")
+                    .show();
+            }else{
+                if(currentTopOffset <= 175 && $("#fixed_close_article").hasClass("fixed_close_article_shown")){
+                    $("#fixed_close_article, #fixed_top_article")
+                        .removeClass("fixed_close_article_shown")
+                        .hide();
+                }
             }
         }
     }, 250)
