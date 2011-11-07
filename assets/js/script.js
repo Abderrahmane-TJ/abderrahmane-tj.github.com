@@ -100,12 +100,12 @@ $(document).ready(function(){
     
     checkChanges = setInterval(function() {
         if(currentTopOffset > 175 && !$("#fixed_close_article").hasClass("fixed_close_article_shown")){
-            $("#fixed_close_article")
+            $("#fixed_close_article, #fixed_top_article")
                 .addClass("fixed_close_article_shown")
                 .show();
         }else{
             if(currentTopOffset <= 175 && $("#fixed_close_article").hasClass("fixed_close_article_shown")){
-                $("#fixed_close_article")
+                $("#fixed_close_article, #fixed_top_article")
                     .removeClass("fixed_close_article_shown")
                     .hide();
             }
