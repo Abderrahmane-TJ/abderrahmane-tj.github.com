@@ -93,6 +93,7 @@ $(document).ready(function(){
 		$("#head-article").hide();
         $("#fixed_close_article, #fixed_top_article").removeClass("fixed_close_article_shown").hide();
         //$(this).removeClass("closeing-button-shown");
+        //
 	});
     
     $("#fixed_top_article").click(function() {
