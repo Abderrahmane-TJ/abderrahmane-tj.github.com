@@ -321,7 +321,7 @@ hr {
   padding-left: 8px;
   padding-top: 5px;
   /*box-shadow: 0px 0px 4px #0d0d0d;*/
-  text-shadow: 0px 0px 4px #0d0d0d;
+  /*text-shadow: 0px 0px 4px #0d0d0d;*/
   cursor: pointer;
 
 }
