@@ -1,4 +1,6 @@
-/* Author: Abderrahmane TAHRI JOUTI
+/*
+
+	Author: Abderrahmane TAHRI JOUTI
 
 */
 
@@ -41,12 +43,12 @@ $(document).ready(function(){
 
 		$('body, body a').css({"background-color": bg});
 		$('#menu, #menu a').css({"background-color": bg, "text-shadow": color+" 0px 2px 2px", "color": "white"});
-        
+
 		$("#content")
 			.css({
 /*				"box-shadow": color+" 10px 0px 10px",
 				"border-left": " 10px solid "+color
-*/				
+*/
 				"border-width": "1px",
 				"border-style": "solid",
 				"border-color": color,
@@ -58,16 +60,16 @@ $(document).ready(function(){
 		.end()
 		.find("#list-article")
 		    .hide();
-            
+
             $("#content_wrapper")
     		    .addClass("reading")
                 .css({"box-shadow": color+" 0px 0px 10px"});
-                
+
 			$("#head-article")
     			.css({
     				/*"background": color,*/
     				/*"box-shadow": "0px 0px 4px "+color*/
-    
+
     			}).show();
         //$("#close-article").addClass("closeing-button-shown");
 		$('html,body').animate({scrollTop: $("body").offset().top}, '700');
@@ -95,15 +97,15 @@ $(document).ready(function(){
         //$(this).removeClass("closeing-button-shown");
         //
 	});
-    
+
     $("#fixed_top_article").click(function() {
-          $('html,body').animate({scrollTop: $("body").offset().top}, '700');      
+          $('html,body').animate({scrollTop: $("body").offset().top}, '700');
     });
-    
+
     $(window).scroll(function(e) {
         currentTopOffset = $(window).scrollTop();
     })
-    
+
     checkChanges = setInterval(function() {
         if($("#content_wrapper").hasClass("reading")){
             if(currentTopOffset > 175 && !$("#fixed_close_article").hasClass("fixed_close_article_shown")){
