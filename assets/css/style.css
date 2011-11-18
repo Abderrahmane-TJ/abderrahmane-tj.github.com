@@ -279,7 +279,7 @@ hr {
 }
 #content{
   /*padding-top: 112px;*/
-  
+
 }
 
 #content_wrapper.reading{
@@ -327,7 +327,7 @@ hr {
 }
 #fixed_close_article{
   position: fixed;
-    bottom: 0px;
+    top: 0px;
     right: 40px;
     width: 20px;
     height: 20px;
@@ -345,7 +345,7 @@ hr {
 
 #fixed_top_article{
   position: fixed;
-    bottom: 0px;
+    top: 0px;
     right: 5px;
     width: 20px;
     height: 20px;
