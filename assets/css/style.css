@@ -1,5 +1,5 @@
 /*
- * HTML5 âœ° Boilerplate
+ * HTML5 ✰ Boilerplate
  *
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -231,14 +231,14 @@ hr {
   height: 0;
   margin: 15px 0;
 }
-#menu{
+section#menu{
   width: 251px;
-  margin-top: 50px;
-  margin-left: 20px;
-  float: left;
+  position: fixed;
+  top: 50px;
+  left: 20px;
 
 }
-#menu #logo{
+section#menu #logo{
   /*background:url('imgs/logo.png');
   width:276px;
   height:52px;
@@ -247,121 +247,38 @@ hr {
   line-height: 45px;
   letter-spacing: -1px;
 }
-#menu #logo span{
+section#menu #logo span{
   font-size: 44px;
   letter-spacing: 0px;
 }
-#menu p#description{
+section#menu p#description{
   margin-top: 15px;
   font-size: 12px;
   padding-left:7px;
 }
-#menu nav{
+section#menu nav{
   text-align: center;
 }
-#menu div#social a{
+section#menu div#social a{
   text-align: center;
   text-decoration: none;
 }
 
-/*
-    the content section
-*/
-
-
-#content_wrapper{
+section#content{
+  /*padding-top: 112px;*/
   margin-left: 300px;
   background: white;
   width: 680px;
   margin-top: 20px;
   margin-bottom: 20px;
-  position: relative;
-}
-#content{
-  /*padding-top: 112px;*/
-
 }
 
-#content_wrapper.reading{
-  box-shadow: #333 0px 0px 10px;
+section#content.reading{
+  padding: 10px;
+  box-shadow: #333 0px 0px 20px;
 }
 
-.reading #content{
-    padding: 10px;
-}
-
-#head-article{
-    height: 30px;
-    background-color: #0D0D0D;
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#333333),to(#0D0D0D));
-    background-image: -moz-linear-gradient(top,#0D0D0D,#333333);
-    color: white;
-    display: none;
-    border: 1px solid #000;
-    border-bottom: 0px;
-}
-#head-title{
-    font-size: 15px;
-    padding: 5px 0px 0px 10px;
-    font-family: verdana;
-    text-shadow: 0px -1px 0px #0D0D0D;
-}
-#close-article{
-  width: 20px;
-  height: 20px;
-  background: #0D0D0D;
-  box-shadow: inset 0px 1px 2px #000;
-  background-image: -webkit-gradient(linear,left top,left bottom,from(#0D0D0D),to(#232323));
-  text-shadow: 0px 2px 1px black;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  color: white;
-  font-size: 20px;
-  padding-left: 8px;
-  padding-top: 5px;
-  /*box-shadow: 0px 0px 4px #0d0d0d;*/
-  /*text-shadow: 0px 0px 4px #0d0d0d;*/
-  cursor: pointer;
-
-}
-#fixed_close_article{
-  position: fixed;
-    top: 0px;
-    right: 40px;
-    width: 20px;
-    height: 20px;
-    background: #0D0D0D;
-    color: white;
-    font-size: 20px;
-    padding-left: 8px;
-    padding-top: 5px;
-    box-shadow: 0px 0px 4px #0d0d0d;
-    text-shadow: 0px 0px 4px #0D0D0D;
-    cursor: pointer;
-    display: none;
-    z-index: 10;
-}
-
-#fixed_top_article{
-  position: fixed;
-    top: 0px;
-    right: 5px;
-    width: 20px;
-    height: 20px;
-    background: #0D0D0D;
-    color: white;
-    font-size: 20px;
-    padding-left: 8px;
-    padding-top: 5px;
-    box-shadow: 0px 0px 4px #0d0d0d;
-    text-shadow: 0px 0px 4px #0D0D0D;
-    cursor: pointer;
-    display: none;
-    z-index: 10;
-}
-
-.card{
+section#content article{
   float: left;
   margin: 10px 0px 0px 10px;
   width: 300px;
@@ -380,7 +297,7 @@ hr {
   cursor: pointer;
 }
 
-.reading article{
+section#content.reading article{
   float: none;
   margin: 0px;
   width: inherit;
@@ -400,26 +317,26 @@ hr {
 
 
 
-.card.redone {background: #dc3912;border-color: #95270c;text-shadow: 0px 2px 2px #95270c;}
-.card.blueone {background: #3366cc;border-color: #24478f;text-shadow: 0px 2px 2px #24478f;}
-.card.yellowone {background: #ff9900;border-color: #b36b00;text-shadow: 0px 2px 2px #b36b00;}
-.card.pinkone {background: #dd4477;border-color: #b42152;text-shadow: 0px 2px 2px #b42152;}
-.card.greenone {background: #66aa00;border-color: #385d00;text-shadow: 0px 2px 2px #385d00;}
-.card.purpleone {background: #990099;border-color: #4d004c;text-shadow: 0px 2px 2px #4d004c;}
-.card.bluetwo {background: #316395;border-color: #1e3d5b;text-shadow: 0px 2px 2px #1e3d5b;}
-.card.redtwo {background: #b82e2e;border-color: #7b1f1f;text-shadow: 0px 2px 2px #7b1f1f;}
-.card.greentwo {background: #109618;border-color: #09510d;text-shadow: 0px 2px 2px #09510d;}
-.card.greenthree {background: #6ECF00;border-color: #478500;text-shadow: 0px 2px 2px #478500;}
-.card.bluethree {background: #0099c6;border-color: #005e7a;text-shadow: 0px 2px 2px #005e7a;}
-.card.greyone {background: #474747;border-color: #212121;text-shadow: 0px 2px 2px #212121;}
-.card.greytwo {background: #333;border-color: #0D0D0D;text-shadow: 0px 2px 2px #0D0D0D;}
-.card.kamouni {background: #6B5E44;border-color: #3B3426;text-shadow: 0px 2px 2px #3B3426;}
+section#content article.redone {background: #dc3912;border-color: #95270c;text-shadow: 0px 2px 2px #95270c;}
+section#content article.blueone {background: #3366cc;border-color: #24478f;text-shadow: 0px 2px 2px #24478f;}
+section#content article.yellowone {background: #ff9900;border-color: #b36b00;text-shadow: 0px 2px 2px #b36b00;}
+section#content article.pinkone {background: #dd4477;border-color: #b42152;text-shadow: 0px 2px 2px #b42152;}
+section#content article.greenone {background: #66aa00;border-color: #385d00;text-shadow: 0px 2px 2px #385d00;}
+section#content article.purpleone {background: #990099;border-color: #4d004c;text-shadow: 0px 2px 2px #4d004c;}
+section#content article.bluetwo {background: #316395;border-color: #1e3d5b;text-shadow: 0px 2px 2px #1e3d5b;}
+section#content article.redtwo {background: #b82e2e;border-color: #7b1f1f;text-shadow: 0px 2px 2px #7b1f1f;}
+section#content article.greentwo {background: #109618;border-color: #09510d;text-shadow: 0px 2px 2px #09510d;}
+section#content article.greenthree {background: #6ECF00;border-color: #478500;text-shadow: 0px 2px 2px #478500;}
+section#content article.bluethree {background: #0099c6;border-color: #005e7a;text-shadow: 0px 2px 2px #005e7a;}
+section#content article.greyone {background: #474747;border-color: #212121;text-shadow: 0px 2px 2px #212121;}
+section#content article.greytwo {background: #333;border-color: #0D0D0D;text-shadow: 0px 2px 2px #0D0D0D;}
+section#content article.kamouni {background: #6B5E44;border-color: #3B3426;text-shadow: 0px 2px 2px #3B3426;}
 
 
 
 
 
-.card span.index-article-title{
+section#content article span.index-article-title{
 
   font-size: 40px;
   line-height: 70px;
@@ -434,14 +351,29 @@ hr {
   left: 10px;
 }
 
+section#content #close-article{
+  width: 20px;
+  height: 20px;
+  background: #0D0D0D;
+  position: fixed;
+  left: 1002px;
+  top: 40px;
+  color: white;
+  font-size: 20px;
+  padding-left: 8px;
+  padding-top: 5px;
+  box-shadow: 0px 0px 4px #0d0d0d;
+  cursor: pointer;
+  display: none;
+}
 
-.reading h1{
+section#content.reading h1{
   line-height: 70px;
   margin-top: 0px;
   font-size: 40px;
 }
 
-.reading article p{
+section#content.reading article p{
 
   font-size: 13px;
   line-height: 20px;
@@ -453,13 +385,13 @@ hr {
 
 }
 
-#content h3{
+section#content h3{
   font-size: 20px;
 
   line-height: 26px;
   margin-top: 10px;
 }
-#content p{
+section#content p{
   line-height: 23px;
   text-align: justify;
   margin-top: 15px;

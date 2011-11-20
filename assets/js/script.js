@@ -1,126 +1,132 @@
-/*
-
-Author: Abderrahmane TAHRI JOUTI
+/* Author: Abderrahmane TAHRI JOUTI
 
 */
 
 var colors
 $(document).ready(function(){
-    colors = {
-		"redone": { main: "#dc3912", side: "#95270c" },
-		"blueone": { main: "#3366cc", side: "#24478f" },
-		"yellowone": { main: "#ff9900", side: "#b36b00" },
-		"pinkone": { main: "#dd4477", side: "#b42152" },
-		"greenone": { main: "#66aa00", side: "#385d00" },
-		"purpleone": { main: "#990099", side: "#4d004c" },
-		"bluetwo": { main: "#316395", side: "#1e3d5b" },
-		"redtwo": { main: "#b82e2e", side: "#7b1f1f" },
-		"greentwo": { main: "#109618", side: "#09510d" },
-		"greenthree":{ main: "#6ECF00", side: "#478500" },
-		"bluethree": { main: "#0099c6", side: "#005e7a" },
-		"kamouni": { main: "#6B5E44", side: "#3B3426" },
-		"greyone": { main: "#474747", side: "#212121" },
-		"greytwo": { main: "#333", side: "#0D0D0D" }
+	colors = {
+		"redone": {
+			main: "#dc3912",
+			side: "#95270c"
+		},
+		"blueone": {
+			main: "#3366cc",
+			side: "#24478f"
+		},
+		"yellowone": {
+			main: "#ff9900",
+			side: "#b36b00"
+		},
+		"pinkone": {
+			main: "#dd4477",
+			side: "#b42152"
+		},
+		"greenone": {
+			main: "#66aa00",
+			side: "#385d00"
+		},
+		"purpleone": {
+			main: "#990099",
+			side: "#4d004c"
+		},
+		"bluetwo": {
+			main: "#316395",
+			side: "#1e3d5b"
+		},
+		"redtwo": {
+			main: "#b82e2e",
+			side: "#7b1f1f"
+		},
+		"greentwo": {
+			main: "#109618",
+			side: "#09510d"
+		},
+		"greenthree":{
+			main: "#6ECF00",
+			side: "#478500"
+		},
+		"bluethree": {
+			main: "#0099c6",
+			side: "#005e7a"
+		},
+		"kamouni": {
+			main: "#6B5E44",
+			side: "#3B3426"
+		},
+		"greyone": {
+			main: "#474747",
+			side: "#212121"
+		},
+		"greytwo": {
+			main: "#333",
+			side: "#0D0D0D"
+		}
 	},
 	nc = 10 /* Object.size(colors) */,
 	lorem = ["Nam quis nulla.","Lorem ipsum dolor sit amet","Lorem ipsum dolor sit amet", "Etiam posuere quam ac quam.","In sem justo, commodo ut.","Morbi a metus. biglou sidi.","Praesent in mauris eu.", "Morbi leo mi, malou fati.","Maecenas ipsum velit","Aenean placerat. tirabichu."],
 	cache = []
-	lastTopOffset = 0,
-    currentTopOffset = 0;
+	lastTopOffset = 0;
 
-	$(".card").each(function(i,elm){
+	$("article").each(function(i,elm){
 
 		$this = $(this);
 
-	    $this.html("<span class='index-article-title'>"+lorem[i%nc]+"</span>");
+	    $this.html($("<span class='index-article-title'>").html(lorem[i%nc]));
+
 
 	}).bind("click", function(evt){
 		$this = $(this);
 		lastTopOffset = $this.offset().top;
-		var dcolor = $this.data("color");
-        var bg = colors[dcolor].main;
-		var color = colors[dcolor].side;
-
-		$('body, body a').css({"background-color": bg});
-		$('#menu, #menu a').css({"background-color": bg, "text-shadow": color+" 0px 2px 2px", "color": "white"});
-
+		var bg = $this.css("background-color");
+		var shadow = $this.css("text-shadow");
+		var color = shadow.replace(/ [0-9]*px/ig,"")
+		$('body, body a').css({"background-color": bg})
+		$('#menu, #menu a').css({"background-color": bg, "text-shadow": shadow, "color": "white"})
 		$("#content")
+			.addClass("reading")
 			.css({
 /*				"box-shadow": color+" 10px 0px 10px",
 				"border-left": " 10px solid "+color
-*/
+*/				"box-shadow": color+" 0px 0px 10px",
 				"border-width": "1px",
 				"border-style": "solid",
-				"border-color": color,
-                "border-top": "0px"
+				"border-color": color
 			})
-		.find("#open-article")
+			.find("#open-article")
 			.html(lorem_content)
 			.show()
-		.end()
-		.find("#list-article")
-		    .hide();
+			.end()
+			.find("#list-article")
+			.hide();
+			$("#close-article")
+			.css({
+				"background": color,
+				"box-shadow": "0px 0px 4px "+color
 
-            $("#content_wrapper")
-    		    .addClass("reading")
-                .css({"box-shadow": color+" 0px 0px 10px"});
+			}).show();
 
-			$("#head-article")
-    			.css({
-    				/*"background": color,*/
-    				/*"box-shadow": "0px 0px 4px "+color*/
-
-    			}).show();
-        //$("#close-article").addClass("closeing-button-shown");
 		$('html,body').animate({scrollTop: $("body").offset().top}, '700');
 	});
 
-	$("#close-article, #fixed_close_article").live("click",function(){
+	$("#close-article").live("click",function(){
 		$('body, body a').css({"background-color": "white"})
 		$('#menu, #menu a').css({"background-color": "white", "text-shadow": "none", "color": "black"})
 		$("#content")
+			.removeClass("reading")
 			.css({
+				"box-shadow": "none",
 				"border-width": "0px",
 				"border-style": "none",
 				"border-color": "none"
 			});
-        $("#content_wrapper")
-            .removeClass("reading")
-            .css({"box-shadow": "none"});
+
 
 		$("#open-article").hide();
 		$("#list-article").show();
 		$('html,body').animate({scrollTop: lastTopOffset-35}, '700');
 		lastTopOffset = 0;
-		$("#head-article").hide();
-        $("#fixed_close_article, #fixed_top_article").removeClass("fixed_close_article_shown").hide();
-        //$(this).removeClass("closeing-button-shown");
-        //
+		$(this).hide();
 	});
-
-    $("#fixed_top_article").click(function() {
-          $('html,body').animate({scrollTop: $("body").offset().top}, '700');
-    });
-
-    $(window).scroll(function(e) {
-        currentTopOffset = $(window).scrollTop();
-    })
-
-    checkChanges = setInterval(function() {
-        if($("#content_wrapper").hasClass("reading")){
-            if(currentTopOffset > 175 && !$("#fixed_close_article").hasClass("fixed_close_article_shown")){
-                $("#fixed_close_article, #fixed_top_article")
-                    .addClass("fixed_close_article_shown")
-                    .show();
-            }else{
-                if(currentTopOffset <= 175 && $("#fixed_close_article").hasClass("fixed_close_article_shown")){
-                    $("#fixed_close_article, #fixed_top_article")
-                        .removeClass("fixed_close_article_shown")
-                        .hide();
-                }
-            }
-        }
-    }, 250)
 
 });
 
