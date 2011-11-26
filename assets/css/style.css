@@ -213,16 +213,15 @@ td { vertical-align: top; }
 
 	body{
 		width: 680px;
-		margin: 0 auto;
 		position: relative;
 		background: #ffffff;
 		font: normal normal normal 12px/16px Aller, 'Trebuchet MS', Helvetica, sans-serif;
 	}
 	#container{
-		margin: 29.5px auto;
+		margin: 30px 0 0 260px;
 	}
 	#header{
-		height: 30px;
+		height: 1px;
 		width: 680px;
 		position: fixed;
 		top: 0px;
