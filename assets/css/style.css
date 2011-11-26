@@ -332,7 +332,7 @@ td { vertical-align: top; }
 		border-style: solid;
 		border-width: 10px;
 		border-color: #0D0D0D;
-		text-shadow: 0px 2px 2px #0D0D0D;
+		text-shadow: 0px -1px 2px #0D0D0D;
 
 		position: relative;
 
@@ -343,20 +343,20 @@ td { vertical-align: top; }
 	}
 
 
-	article.redone {background: #dc3912;border-color: #95270c;text-shadow: 0px 2px 2px #95270c;}
-	article.blueone {background: #3366cc;border-color: #24478f;text-shadow: 0px 2px 2px #24478f;}
-	article.yellowone {background: #ff9900;border-color: #b36b00;text-shadow: 0px 2px 2px #b36b00;}
-	article.pinkone {background: #dd4477;border-color: #b42152;text-shadow: 0px 2px 2px #b42152;}
-	article.greenone {background: #66aa00;border-color: #385d00;text-shadow: 0px 2px 2px #385d00;}
-	article.purpleone {background: #990099;border-color: #4d004c;text-shadow: 0px 2px 2px #4d004c;}
-	article.bluetwo {background: #316395;border-color: #1e3d5b;text-shadow: 0px 2px 2px #1e3d5b;}
-	article.redtwo {background: #b82e2e;border-color: #7b1f1f;text-shadow: 0px 2px 2px #7b1f1f;}
-	article.greentwo {background: #109618;border-color: #09510d;text-shadow: 0px 2px 2px #09510d;}
-	article.greenthree {background: #6ECF00;border-color: #478500;text-shadow: 0px 2px 2px #478500;}
-	article.bluethree {background: #0099c6;border-color: #005e7a;text-shadow: 0px 2px 2px #005e7a;}
-	article.greyone {background: #474747;border-color: #212121;text-shadow: 0px 2px 2px #212121;}
-	article.greytwo {background: #333;border-color: #0D0D0D;text-shadow: 0px 2px 2px #0D0D0D;}
-	article.kamouni {background: #6B5E44;border-color: #3B3426;text-shadow: 0px 2px 2px #3B3426;}
+	article.redone {background: #dc3912;border-color: #95270c;text-shadow: 0px -1px 2px #95270c;}
+	article.blueone {background: #3366cc;border-color: #24478f;text-shadow: 0px -1px 2px #24478f;}
+	article.yellowone {background: #ff9900;border-color: #b36b00;text-shadow: 0px -1px 2px #b36b00;}
+	article.pinkone {background: #dd4477;border-color: #b42152;text-shadow: 0px -1px 2px #b42152;}
+	article.greenone {background: #66aa00;border-color: #385d00;text-shadow: 0px -1px 2px #385d00;}
+	article.purpleone {background: #990099;border-color: #4d004c;text-shadow: 0px -1px 2px #4d004c;}
+	article.bluetwo {background: #316395;border-color: #1e3d5b;text-shadow: 0px -1px 2px #1e3d5b;}
+	article.redtwo {background: #b82e2e;border-color: #7b1f1f;text-shadow: 0px -1px 2px #7b1f1f;}
+	article.greentwo {background: #109618;border-color: #09510d;text-shadow: 0px -1px 2px #09510d;}
+	article.greenthree {background: #6ECF00;border-color: #478500;text-shadow: 0px -1px 2px #478500;}
+	article.bluethree {background: #0099c6;border-color: #005e7a;text-shadow: 0px -1px 2px #005e7a;}
+	article.greyone {background: #474747;border-color: #212121;text-shadow: 0px -1px 2px #212121;}
+	article.greytwo {background: #333;border-color: #0D0D0D;text-shadow: 0px -1px 2px #0D0D0D;}
+	article.kamouni {background: #6B5E44;border-color: #3B3426;text-shadow: 0px -1px 2px #3B3426;}
 
 
 .home-article-title{
