@@ -36,7 +36,7 @@ $(document).ready(function(){
 		var color = colors[dcolor].side;
 
 		$('body, body a').css({"background-color": bg});
-		$('#menu, #menu a').css({"background-color": bg, "text-shadow": color+" 0px 2px 2px", "color": "white"});
+		$('#menu, #menu a').css({"background-color": bg, "text-shadow": color+" 0px -1px 2px", "color": "white"});
 
 		$("#content")
 			.css({
