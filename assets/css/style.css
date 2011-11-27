@@ -211,12 +211,66 @@ td { vertical-align: top; }
    Author: Abderrahmane TAHRI JOUTI
    ========================================================================== */
 
+	a, a:visited, a:hover { color: #333; }
+	hr{
+		border: 0;
+		border-top: 1px solid #000;
+		border-bottom: 1px solid #fff;
+		border-top: 1px dotted rgba(0,0,0,0.1);
+		border-bottom: 1px dotted rgba(255,255,255,0.3);
+		filter: alpha(opacity = 30);
+		clear: both;
+		height: 0;
+		margin: 15px 0;
+	}
 	body{
 		position: relative;
 		background: #ffffff;
-		font: normal normal normal 12px/16px Aller, 'Trebuchet MS', Helvetica, sans-serif;
+		font: normal normal normal 100% Cambria, Georgia, "Times New Roman", Times, serif;
 	}
-	#container{
+	h1, h2, h3, h4, h5, h6, .sans-serif{
+		font-family: Helvetica, Arial, sans-serif;
+	}
+	.serif{
+		font-family: Cambria, Georgia, "Times New Roman", Times, serif;
+	}
+	#menu{
+		width: 260px;
+		margin-top: 50px;
+		float: left;
+		text-align: center;
+	}
+	#menu .wrap{
+		width: 260px;
+		position: fixed;
+	}
+	#menu #logo{
+		/*background:url('imgs/logo.png');
+		width:276px;
+		height:52px;
+		margin-left: -23px;*/
+		font-size: 35px;
+		line-height: 45px;
+		letter-spacing: -1px;
+	}
+	#menu #logo span{
+		font-size: 35px;
+		letter-spacing: 0px;
+	}
+	#menu p#description{
+		margin-top: 15px;
+		font-size: 15px;
+	}
+	#menu nav{
+		text-align: center;
+	}
+	#menu div#social a{
+		text-align: center;
+		text-decoration: none;
+	}
+
+
+	#content{
 		width: 680px;
 		margin: 30px 0 0 260px;
 	}
@@ -255,7 +309,8 @@ td { vertical-align: top; }
 		text-shadow: 0px 2px 1px black;
 		color: white;
 		font-size: 20px;
-
+		line-height: 15px;
+		text-indent: -1px;
 
 		cursor: pointer;
 		z-index: 10;
@@ -277,16 +332,16 @@ td { vertical-align: top; }
 		text-shadow: 0px 2px 1px black;
 		color: white;
 		font-size: 20px;
-
+		text-indent: 1px;
 
 
 		cursor: pointer;
 		z-index: 10;
 	}
-	#content{
+	#container{
 
 	}
-	#content.reading{
+	#container.reading{
 		background: #ffffff;
 	}
 	.inner10{
@@ -298,6 +353,7 @@ td { vertical-align: top; }
 	}
 
 	.page h1{
+
 		line-height: 70px;
 		margin-top: 0px;
 		font-size: 40px;
@@ -305,10 +361,9 @@ td { vertical-align: top; }
 
 	.page p{
 
-		font-size: 13px;
-		line-height: 20px;
+		line-height: 1.5em;
 		color: #333;
-		margin: 10px 0px 0px 0px;
+		margin: 0px 0px 24px 0px;
 
 		text-align: left;
 
@@ -317,6 +372,7 @@ td { vertical-align: top; }
 
 	.home{
 		overflow: hidden;
+		width: 100%;
 		display: block;
 	}
 
@@ -366,7 +422,7 @@ td { vertical-align: top; }
   width: 280px;
   margin: 0px;
 
-  text-align: left;
+  text-align: right;
 
   position: absolute;
   bottom: 10px;

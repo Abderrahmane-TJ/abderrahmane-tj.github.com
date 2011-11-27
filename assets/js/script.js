@@ -36,22 +36,21 @@ $(document).ready(function(){
 		var color = colors[dcolor].side;
 
 		$('body, body a').css({"background-color": bg});
-		$('#menu, #menu a').css({"background-color": bg, "text-shadow": color+" 0px 2px 2px", "color": "white"});
+		$('#menu, #menu a').css({/*"background-color": bg,*/ "text-shadow": color+" 0px 1px 1px", "color": "white"});
 
-		$("#content")
+		$("#container")
 			.css({
 				"border-width": "1px",
 				"border-style": "solid",
 				"border-color": color,
 			})
 		.find(".page")
-
 			.show()
 		.end()
 		.find(".home")
 		    .hide();
 
-            $("#content")
+            $("#container")
     		    .addClass("reading")
                 .css({"box-shadow": color+" 0px 0px 10px"});
 
@@ -61,8 +60,8 @@ $(document).ready(function(){
 
 	$("#close-article").live("click",function(){
 		$('body, body a').css({"background-color": "white"})
-		$('#menu, #menu a').css({"background-color": "white", "text-shadow": "none", "color": "black"})
-		$("#content")
+		$('#menu, #menu a').css({/*"background-color": "white",*/ "text-shadow": "none", "color": "black"})
+		$("#container")
 			.css({
 				"border-width": "0px",
 				"border-style": "none",
