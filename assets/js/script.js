@@ -33,7 +33,7 @@ $(document).ready(function(){
         var bg = colors[dcolor].main;
 		var color = colors[dcolor].side;
 
-		$('body, body a').css({"background-color": bg});
+		$('body').css({"background-color": bg});
 		$('#menu, #menu a').css({/*"background-color": bg,*/ "text-shadow": color+" 0px 1px 1px", "color": "white"});
 
 		$("#container")
@@ -42,6 +42,11 @@ $(document).ready(function(){
 				"border-style": "solid",
 				"border-color": color,
 			})
+		.find("a")
+			.css({
+				"color": bg
+			})
+		.end()
 		.find(".page")
 			.show()
 		.end()
@@ -57,7 +62,7 @@ $(document).ready(function(){
 	});
 
 	$("#close-article").live("click",function(){
-		$('body, body a').css({"background-color": "white"})
+		$('body').css({"background-color": "white"})
 		$('#menu, #menu a').css({/*"background-color": "white",*/ "text-shadow": "none", "color": "black"})
 		$("#container")
 			.css({
