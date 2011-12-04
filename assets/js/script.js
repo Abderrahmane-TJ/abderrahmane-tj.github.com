@@ -23,8 +23,6 @@ $(document).ready(function(){
 		"greytwo": { main: "#333", side: "#0D0D0D" }
 	},
 	nc = 10 /* Object.size(colors) */,
-	lorem = ["Nam quis nulla.","Lorem ipsum dolor sit amet","Lorem ipsum dolor sit amet", "Etiam posuere quam ac quam.","In sem justo, commodo ut.","Morbi a metus. biglou sidi.","Praesent in mauris eu.", "Morbi leo mi, malou fati.","Maecenas ipsum velit","Aenean placerat. tirabichu."],
-	cache = []
 	lastTopOffset = 0,
     currentTopOffset = 0;
 
