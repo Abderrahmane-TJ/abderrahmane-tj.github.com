@@ -105,18 +105,3 @@ $(document).ready(function(){
     }, 250)
 
 });
-/*
-Object.size = function(obj) {
-    var size = 0, key;
-    for (key in obj) {
-        if (obj.hasOwnProperty(key)) size++;
-    }
-    return size;
-};
-
-
-
-function golden_ratio(){
-	return (1+Math.sqrt(5)) / 2;
-}
-*/
