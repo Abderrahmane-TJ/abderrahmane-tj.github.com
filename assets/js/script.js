@@ -42,7 +42,7 @@ $(document).ready(function(){
 				"border-style": "solid",
 				"border-color": color,
 			})
-		.find("a")
+		.find(".page a")
 			.css({
 				"color": bg
 			})

@@ -236,6 +236,7 @@ td { vertical-align: top; }
 	}
 	#body-wrapper{
 		padding: 70px 0 0 0;
+		width: 940px;
 	}
 	#menu{
 		width: 260px;
